@@ -1,0 +1,48 @@
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-position: 50% 20vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+  position: relative;
+  background-color: #010206;
+}
+.title,
+.subtitle {
+  color: WHITE;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.webp .main-container {
+  background-image: url(/img/background.webp);
+}
+.no-webp .main-container,
+.no-js .main-container {
+  background-image: url(/img/background.jpg);
+}
+
+.container__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  color: WHITE;
+}
+.icon:hover {
+  transition: 300ms;
+  color: hsl(330, 67%, 63%);
+}
