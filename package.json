@@ -1,0 +1,15 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jamespjarvis/personal_website.git",
+  "author": "James Jarvis <jamespjarvis@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "postcss-cli": "^6.1.2"
+  },
+  "scripts": {
+    "build:css": "postcss src/style.css --use autoprefixer -o styles/style.css"
+  }
+}

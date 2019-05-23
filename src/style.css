@@ -1,0 +1,246 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-position: 50% 20vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+  position: relative;
+  background-color: #010206;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+}
+
+.title.second__title {
+  margin: 0;
+  margin-top: -1em;
+  padding-bottom: 1.5em;
+}
+
+.second__title span {
+  position: relative;
+  padding-bottom: 1em;
+}
+
+.second__title span:after {
+  position: absolute;
+  top: 70%;
+  left: -10%;
+  width: 120%;
+  height: 1px;
+  content: '';
+  background-color: #fff;
+}
+
+.section {
+  flex: 2;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  flex: 1;
+
+}
+
+.title__container .title,
+.title__container .subtitle {
+  color: WHITE;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.webp .main-container {
+  background-image: url(/img/background.webp);
+}
+
+.no-webp .main-container,
+.no-js .main-container {
+  background-image: url(/img/background.jpg);
+}
+
+.title__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  color: WHITE;
+}
+
+.icon:hover {
+  transition: 300ms;
+  color: hsl(330, 67%, 63%);
+}
+
+.projects {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 15px;
+  margin: 0 auto;
+}
+
+:root {
+  --titlebar-height: 1.2em;
+}
+
+.project {
+  box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
+  height: 0;
+  padding-top: 100%;
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  position: relative;
+  border-radius: 4px;
+}
+
+.project__inner {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+}
+
+.project:hover .project__inner .back {
+  top: 50%;
+}
+
+.project:hover .project__inner .front {
+  top: -50%;
+}
+
+.project__inner .front,
+.project__inner .back {
+  transition: 400ms ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.project__inner .image {
+  margin: 0 auto;
+  margin-bottom: 1em;
+
+}
+
+.project__inner .title {
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding-top: 1em;
+}
+
+.project__inner .back {
+  padding: 1.5em;
+  top: 150%;
+}
+
+.project__title {
+  height: var(--titlebar-height);
+  background: linear-gradient(to bottom, #ebebeb, #d5d5d5);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-top: 1px solid #f3f1f3;
+  border-bottom: 1px solid #b1aeb1;
+  box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+.project__buttons {
+  position: absolute;
+}
+
+.project__buttons a.button span {
+  visibility: hidden;
+}
+
+.project__buttons:hover a span {
+  visibility: visible;
+}
+
+.project__buttons.buttons {
+  margin: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 4px;
+  height: 100%;
+  margin-left: 5px;
+}
+
+.project__buttons.buttons .button {
+  margin: 0 !important;
+}
+
+.button {
+  margin: 0;
+  border-radius: 50% !important;
+  padding: 0;
+  width: 1em;
+  height: 1em;
+
+}
+
+.project:hover {
+
+
+  z-index: 3;
+}
+
+.button .icon {
+  font-size: 0.5em;
+  line-height: 1.2em;
+}
+
+/* .project__buttons a .icon {
+  font-size: 12px;
+  height: 13px;
+  width: 13px;
+} */
+.project__title .title {
+
+  font-size: 0.8em;
+  line-height: var(--titlebar-height);
+  color: #4d494d;
+}
+
+.project.active {
+  transition: 2s;
+  z-index: 1000;
+}
