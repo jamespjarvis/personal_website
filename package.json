@@ -10,6 +10,7 @@
     "postcss-cli": "^6.1.2"
   },
   "scripts": {
+    "watch:css": "postcss src/style.css --use autoprefixer --watch -o styles/style.css",
     "build:css": "postcss src/style.css --use autoprefixer -o styles/style.css"
   }
 }

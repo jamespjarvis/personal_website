@@ -8,6 +8,18 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
   <link rel="stylesheet"
         href="/styles/style.css">
+  <script async=""
+          src="https://www.googletagmanager.com/gtag/js?id=UA-101009796-3">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-101009796-3');
+  </script>
 </head>
 
 <body>
@@ -119,7 +131,31 @@
 
 
           </div>
+          <div class="project map"
+               id="map">
 
+            <div class="project__inner">
+              <div class="front">
+                <figure class="image is-128x128">
+                  <img src="/icons/calendar.svg">
+                </figure>
+                <h4 class="title">Datetime Picker</h4>
+              </div>
+              <div class="back">
+                <p>
+                  A component for easy date and time picking.
+                  <br />
+                  <br />
+                  <a target="_blank"
+                     rel="noopener"
+                     href="https://www.npmjs.com/package/simple-vue2-datetimepicker">Datetime
+                    Picker</a>
+                </p>
+              </div>
+            </div>
+
+
+          </div>
         </div>
       </div>
     </section>
