@@ -139,9 +139,13 @@ body {
     width: 100px;
     height: 100px;
   }
+  .front, .back {
+    opacity: 0;
+  }
   &.animate {
     .front,
     .back {
+      opacity: 1;
       transition: 400ms ease;
     }
   }
