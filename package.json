@@ -21,6 +21,7 @@
     "webpack-dev-server": "^3.4.1"
   },
   "scripts": {
+    "build": "webpack",
     "start": "webpack-dev-server --open",
     "watch:css": "postcss src/style.css --use autoprefixer --watch -o styles/style.css",
     "build:css": "postcss src/style.css --use autoprefixer -o styles/style.css"
