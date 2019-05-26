@@ -2,10 +2,6 @@
 
 <head>
   <title>Home | James Jarvis</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans"
-        rel="stylesheet">
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
   <script async=""
           src="https://www.googletagmanager.com/gtag/js?id=UA-101009796-3">
   </script>
@@ -15,155 +11,147 @@
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
-    gtag('config', 'UA-101009796-3');
+    gtag("js", new Date());
+    gtag("config", "UA-101009796-3");
   </script>
 </head>
 
 <body>
-  <div class="overlay"></div>
-  <main class="main-container">
-    <div class="section title__container">
+  <header class="header">
+    <h1 class="title is-3">James Jarvis</h1>
+  </header>
+  <main class="section">
+    <div class="overlay"></div>
+    <div class="container has-text-centered title__container">
       <h1 class="title is-1">
-        James Jarvis
-      </h1>
-      <h2 class="subtitle is-uppercase">
         Full Stack Web Developer
-      </h2>
-      <div class="social-container"
-           style="font-size: 24px;">
+      </h1>
+      <div class="field is-grouped is-grouped-centered">
+        <p class="control">
+          <a target="_blank"
+             rel="noopener"
+             href="https://www.linkedin.com/in/james-jarvis1/"
+             class="button is-light is-outlined">
+            <span class="icon">
+              <i class="fab fa-linkedin-in"></i>
+            </span>
+          </a>
+        </p>
+        <p class="control">
+          <a target="_blank"
+             rel="noopener"
+             href="https://www.github.com/jamespjarvis"
+             class="button is-light is-outlined">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+          </a>
+        </p>
 
-        <a target="_blank"
-           rel="noopener"
-           href="https://www.linkedin.com/in/james-jarvis1/">
-          <span class="icon is-large">
-            <i class="fab fa-lg fa-linkedin-in"></i>
-          </span>
-        </a>
-
-        <a target="_blank"
-           rel="noopener"
-           href="https://www.github.com/jamespjarvis">
-          <span class="icon is-large">
-            <i class="fab fa-lg fa-github"></i>
-          </span>
-        </a>
-
-        <a target="_blank"
-           rel="noopener"
-           href="mailto:jamespjarvis@gmail.com">
-          <span class="icon is-large">
-            <i class="far fa-lg fa-envelope"></i>
-          </span>
-        </a>
+        <p class="control">
+          <a target="_blank"
+             rel="noopener"
+             href="mailto:jamespjarvis@gmail.com"
+             class="button is-light is-outlined">
+            <span class="icon">
+              <i class="far fa-envelope"></i>
+            </span>
+          </a>
+        </p>
       </div>
     </div>
-    <section class="section">
-      <div class="container is-fluid">
-        <h3 class="title has-text-white second__title">
-          <span>Projects</span>
-        </h3>
-
-        <div class="projects">
-          <div class="project blokus"
-               id="blokus">
-            <div class="project__inner">
-              <div class="front">
-                <figure class="image">
-                  <img src=<%=require("./icons/blokus.svg")%> />
-                </figure>
-                <h4 class="title">Blokus</h4>
-              </div>
-              <div class="back">
-                <p>
-                  A Blokus clone with multiplayer and competitive computer
-                  opponents.
-                  <br />
-                  <br />
-                  <a href="/blokus">Blokus</a>
-                </p>
-              </div>
+    <div class="container">
+      <h1 class="title is-4">Projects</h1>
+      <div class="projects has-text-centered">
+        <div class="project">
+          <div class="project__inner">
+            <div class="top">
+              <figure class="image">
+                <img src=<%=require("./img/blokus.svg")%> />
+              </figure>
+              <p class="heading">Blokus</p>
             </div>
+            <div class="bottom">
+              <p>
+                A Blokus clone with multiplayer and competitive computer
+                opponents.
+                <br />
+                <br />
+                <a href="/blokus">Blokus</a>
+              </p>
+            </div>
+            <!-- <p class="title">3,456</p> -->
           </div>
-
-          <div class="project map"
-               id="map">
-
-            <div class="project__inner">
-              <div class="front">
-                <figure class="image">
-                  <img src=<%= require('./icons/locate.svg') %> />
-                </figure>
-                <h4 class="title">Locator</h4>
-              </div>
-              <div class="back">
-                <p>
-                  A dealer locater component using Leaflet.js.
-                  <br />
-                  <br />
-                  <a href="/map">Dealer Locator</a>
-                </p>
-              </div>
+        </div>
+        <div class="project">
+          <div class="project__inner">
+            <div class="top">
+              <figure class="image">
+                <img src=<%= require('./img/locator.svg') %> />
+              </figure>
+              <p class="heading">Locator</p>
             </div>
-
-
+            <div class="bottom">
+              <p>
+                A dealer locater component using Leaflet.js.
+                <br />
+                <br />
+                <a href="/map">Dealer Locator</a>
+              </p>
+            </div>
+            <!-- <p class="title">123</p> -->
           </div>
-          <div class="project wordland"
-               id="wordland">
-
-            <div class="project__inner">
-              <div class="front">
-                <figure class="image">
-                  <img src=<%=require("./icons/words.svg")%> />
-                </figure>
-                <h4 class="title">Wordland</h4>
-              </div>
-              <div class="back">
-                <p>
-                  A multiplayer word game.
-                  <br />
-                  <br />
-                  <a href="/wordland">Wordland</a>
-                </p>
-              </div>
+        </div>
+        <div class="project">
+          <div class="project__inner">
+            <div class="top">
+              <figure class="image">
+                <img src=<%= require('./img/wordland.svg') %> />
+              </figure>
+              <p class="heading">Wordland</p>
             </div>
+            <div class="bottom">
+              <p>
+                A multiplayer word game.
+                <br />
+                <br />
+                <a href="/wordland">Wordland</a>
+              </p>
+            </div>
+            <!-- <p class="title">456K</p> -->
           </div>
-          <div class="project map"
-               id="map">
-
-            <div class="project__inner">
-              <div class="front">
-                <figure class="image">
-                  <img src=<%= require("./icons/calendar.svg") %> />
-                </figure>
-                <h4 class="title">Datetime Picker</h4>
-              </div>
-              <div class="back">
-                <p>
-                  A component for easy date and time picking.
-                  <br />
-                  <br />
-                  <a target="_blank"
-                     rel="noopener"
-                     href="https://www.npmjs.com/package/simple-vue2-datetimepicker">Datetime
-                    Picker</a>
-                </p>
-              </div>
+        </div>
+        <div class="project">
+          <div class="project__inner">
+            <div class="top">
+              <figure class="image">
+                <img src=<%= require('./img/calendar.svg') %> />
+              </figure>
+              <p class="heading">Datetime Picker</p>
             </div>
-
-
+            <div class="bottom">
+              <p>
+                A component for easy date and time picking.
+                <br />
+                <br />
+                <a target="_blank"
+                   rel="noopener"
+                   href="https://www.npmjs.com/package/simple-vue2-datetimepicker">Datetime
+                  Picker</a>
+              </p>
+            </div>
+            <!-- <p class="title">Datetime Picker</p> -->
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <script>
-    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.remove("no-js");
   </script>
   <script defer
-          src="https://use.fontawesome.com/releases/v5.3.1/js/all.js">
-  </script>
+          src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <!-- <script src="/scripts/index.js"></script> -->
 </body>
 

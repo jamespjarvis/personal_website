@@ -34,6 +34,10 @@ module.exports = {
         use: [
           'file-loader'
         ]
+      },
+      {
+        test: /\.pug$/,
+        use: ['pug-loader']
       }
     ]
   },
@@ -45,11 +49,16 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Home | James Jarvis',
-      template: path.resolve(__dirname, 'public', 'index.html')
+      template: path.resolve(__dirname, 'src', 'views', 'index.pug')
     })
   ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
   }
 };

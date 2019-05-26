@@ -1,0 +1,12 @@
+mixin project(fullname, heading, icon, description, link)
+    .project
+        .project__inner
+            .top
+                figure.image
+                    img(src=icon)
+                p.heading #{heading}
+            .bottom
+                p #{description}
+                    br
+                    br
+                    a(href='#{link}', target="_blank") #{fullname}
