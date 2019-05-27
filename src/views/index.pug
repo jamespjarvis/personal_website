@@ -1,4 +1,4 @@
-html.has-navbar-fixed-top(lang='en')
+html(lang='en')
     head
         include partials/head.pug
     body
@@ -19,7 +19,7 @@ html.has-navbar-fixed-top(lang='en')
                 a#projects-link.title.is-2.fade-in-2(href="#projects")
                     span Projects
                     span.arrow-down
-            .container.is-fluid.has-text-centered
+            .container.has-text-centered
                 #projects
                     +project("Blokus", "Blokus", require("@/icons/blokus.svg"), "A Blokus clone with multiplayer and competitive computer opponents.", "/blokus")
                     +project("Dealer Locator", "Locator", require("@/icons/locator.svg"), "A dealer locater component using Leaflet.js.", "/map")
