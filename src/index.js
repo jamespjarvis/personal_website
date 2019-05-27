@@ -1,6 +1,6 @@
 import "./custom.scss";
 
-document.documentElement.classList.remove('no-js');
+document.documentElement.classList.remove("no-js");
 
 const projectsLink = document.querySelector("#projects-link");
 const projects = document.querySelector("#projects");
@@ -9,14 +9,16 @@ const menu = document.querySelector(".navbar-menu");
 const section = document.querySelector(".section");
 const nav = document.querySelector(".navbar");
 
-const isInNav = (el) => nav === el ? false : nav.contains(el);
+const isInNav = el => (nav === el ? false : nav.contains(el));
 
-const navIsActive = () => burger.classList.contains("is-active") &&
-  menu.classList.contains("is-active") && nav.classList.contains('is-active');
+const navIsActive = () =>
+  burger.classList.contains("is-active") &&
+  menu.classList.contains("is-active") &&
+  nav.classList.contains("is-active");
 
 // toggle navbar dropdown menu
 function handleBurgerClick() {
-  console.log('click')
+  console.log("click");
 
   burger.classList.toggle("is-active");
   menu.classList.toggle("is-active");
@@ -28,11 +30,11 @@ function handleBurgerClick() {
     } = menu.getBoundingClientRect();
     menu.style.opacity = 1;
     section.style.transform = `translate3D(0, ${height - 52}px, 0)`;
-    window.addEventListener('click', handleNavOutClick);
+    window.addEventListener("click", handleNavOutClick);
   } else {
     menu.style.opacity = 0;
     section.style.transform = `translate3D(0, 0, 0)`;
-    window.removeEventListener('click', handleNavOutClick)
+    window.removeEventListener("click", handleNavOutClick);
   }
 }
 
@@ -70,9 +72,6 @@ async function supportsWebp() {
 
 (async () => {
   if (await supportsWebp()) {
-    document.documentElement.classList.add('webp-support');
-    console.log("does support");
-  } else {
-    console.log("does not support");
+    document.documentElement.classList.add("webp-support");
   }
 })();

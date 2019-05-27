@@ -20,28 +20,18 @@ $subtitle-family: $title-family;
 
 @import '~bulma/bulma';
 
-// @import "~bulma/sass/utilities/_all.sass";
-// @import "~bulma/sass/base/_all.sass";
-// @import "~bulma/sass/elements/button.sass";
-// @import "~bulma/sass/elements/container.sass";
-// @import "~bulma/sass/elements/image.sass";
-// @import "~bulma/sass/elements/title.sass";
-// @import "~bulma/sass/elements/other.sass";
-// @import "~bulma/sass/layout/section.sass";
-// @import "~bulma/sass/components/navbar.sass";
-
 html {
   background-color: rgba(0, 0, 0, 0.75);
 
   &.no-js {
     .overlay {
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/img/background.jpeg');
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/img/background.jpg');
     }
   }
 
   &.webp-support {
     .overlay {
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/img/background.webp');
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/img/background.webp');
     }
   }
 }
@@ -56,7 +46,7 @@ html {
 }
 
 .navbar {
-  transition: 150ms ease-out;
+  transition: background 150ms ease-out;
 
   @media only screen and (min-width: 769px) {
     padding: 0 1em;
