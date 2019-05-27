@@ -20,21 +20,6 @@ $subtitle-family: $title-family;
 
 @import '~bulma/bulma';
 
-html {
-  background-color: rgba(0, 0, 0, 0.75);
-
-  &.no-js {
-    .overlay {
-      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/img/background.jpg');
-    }
-  }
-
-  &.webp-support {
-    .overlay {
-      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/img/background.webp');
-    }
-  }
-}
 
 .overlay {
   position: fixed;
@@ -43,7 +28,19 @@ html {
   width: 100%;
   height: 100%;
   z-index: -1;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/img/background.jpg');
 }
+
+html {
+  background-color: rgba(0, 0, 0, 0.75);
+
+  &.webp-support {
+    .overlay {
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/img/background.webp');
+    }
+  }
+}
+
 
 .navbar {
   transition: background 150ms ease-out;
