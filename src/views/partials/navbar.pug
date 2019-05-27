@@ -1,18 +1,12 @@
 nav.navbar.is-transparent.is-dark
     .navbar-brand
-        a.navbar-item(href='/') 
-            h1.title.is-5 James Jarvis
+        a.navbar-item(href='/') James Jarvis
         a.navbar-burger
             span
             span
             span
     .navbar-menu
         .navbar-end
-            .navbar-item
-                .field.is-grouped.is-grouped-centered
-                    p.control
-                        +icon-link("https://www.linkedin.com/in/james-jarvis1/")(class="fab fa-linkedin-in")
-                    p.control
-                        +icon-link("https://www.github.com/jamespjarvis")(class="fab fa-github")
-                    p.control
-                        +icon-link("mailto:jamespjarvis@gmail.com")(class="fa fa-envelope")
+            +icon-link("https://www.linkedin.com/in/james-jarvis1/")(class="fab fa-linkedin-in")
+            +icon-link("https://www.github.com/jamespjarvis")(class="fab fa-github")
+            +icon-link("mailto:jamespjarvis@gmail.com")(class="fa fa-envelope")

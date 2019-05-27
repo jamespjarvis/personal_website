@@ -7,19 +7,23 @@ html.no-js
         include mixins/icon-link.pug
         .overlay
         include partials/navbar.pug
-        main
-            #title.section
-                .container.has-text-centered
-                    h1.title.is-1 Full Stack Web Developer
-                    a#projects-link.title(href="#projects")
-                        span Projects
-                        span.icon
-                            i.fa.fa-chevron-down
-            #projects.section
-                .container
-                    .projects.has-text-centered
-                        +project("Blokus", "Blokus", require("@/icons/blokus.svg"), "A Blokus clone with multiplayer and competitive computer opponents.", "/blokus")
-                        +project("Dealer Locator", "Locator", require("@/icons/locator.svg"), "A dealer locater component using Leaflet.js.", "/map")
-                        +project("Wordland", "Wordland", require("@/icons/wordland.svg"), "A multiplayer word game.", "/wordland")
-                        +project("Datetime Picker", "Datetime Picker", require('@/icons/calendar.svg'), "A component for easy date and time picking.", "https://www.npmjs.com/package/simple-vue2-datetimepicker")
+        main.section
+            #title.container.has-text-centered
+                p.title.is-1.fade-in-1 
+                    | Full 
+                    br
+                    | Stack
+                    br
+                    | Web
+                    br
+                    | Developer
+                a#projects-link.title.is-2.fade-in-2(href="#projects")
+                    span Projects
+                    span.arrow-down
+            .container.is-fluid.has-text-centered
+                #projects
+                    +project("Blokus", "Blokus", require("@/icons/blokus.svg"), "A Blokus clone with multiplayer and competitive computer opponents.", "/blokus")
+                    +project("Dealer Locator", "Locator", require("@/icons/locator.svg"), "A dealer locater component using Leaflet.js.", "/map")
+                    +project("Wordland", "Wordland", require("@/icons/wordland.svg"), "A multiplayer word game.", "/wordland")
+                    +project("Datetime Picker", "Datetime Picker", require('@/icons/calendar.svg'), "A component for easy date and time picking.", "https://www.npmjs.com/package/simple-vue2-datetimepicker")
         script(defer='' src='https://use.fontawesome.com/releases/v5.3.1/js/all.js')
