@@ -1,4 +1,4 @@
-html(lang='en')
+html.no-js(lang='en')
     head
         include partials/head.pug
     body
@@ -7,7 +7,7 @@ html(lang='en')
         .overlay
         include partials/navbar.pug
         main.section
-            #title.container.has-text-centered
+            #title.container
                 p.title.is-1.fade-in-1 
                     | Full 
                     br
@@ -19,10 +19,10 @@ html(lang='en')
                 a#projects-link.title.is-2.fade-in-2(href="#projects")
                     span Projects
                     span.arrow-down
-            .container.has-text-centered
+            .container
                 #projects
-                    +project("Blokus", "Blokus", require("@/icons/blokus.svg"), "A Blokus clone with multiplayer and competitive computer opponents.", "/blokus")
-                    +project("Dealer Locator", "Locator", require("@/icons/locator.svg"), "A dealer locater component using Leaflet.js.", "/map")
-                    +project("Wordland", "Wordland", require("@/icons/wordland.svg"), "A multiplayer word game.", "/wordland")
-                    +project("Datetime Picker", "Datetime Picker", require('@/icons/calendar.svg'), "A component for easy date and time picking.", "https://www.npmjs.com/package/simple-vue2-datetimepicker")
+                    +project("Blokus", "Blokus", require("@/assets/icons/blokus.svg"), "A Blokus clone with multiplayer and competitive computer opponents.", "/blokus")
+                    +project("Dealer Locator", "Locator", require("@/assets/icons/locator.svg"), "A dealer locater component using Leaflet.js.", "/map")
+                    +project("Wordland", "Wordland", require("@/assets/icons/wordland.svg"), "A multiplayer word game.", "/wordland")
+                    +project("Datetime Picker", "Datetime Picker", require('@/assets/icons/calendar.svg'), "A component for easy date and time picking.", "https://www.npmjs.com/package/simple-vue2-datetimepicker")
         script(defer='' src='https://use.fontawesome.com/releases/v5.3.1/js/all.js')
